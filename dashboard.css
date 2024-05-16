@@ -1,0 +1,62 @@
+#hero{
+    background-image: url("images/emonrevisi.png");
+    
+    /* position: relative; */
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    padding: 0 320px;
+    display: flex;
+    /* display: absolute; */
+    flex-direction: column;
+    align-items:  flex-start;
+    justify-content: center;
+}
+/* #hero h4{
+    padding-bottom: 5px;
+} */
+
+#hero h1{
+    color: #20bec6;
+    font-size: 55px;
+    padding-bottom: 35px;
+}
+
+#hero h2{
+    color: #403a56;
+    font-size: 40px;
+    padding-top: 20px;
+}
+#hero p{
+    color: ghostwhite;
+}
+
+#hero button {
+    background-image: url("images/cyanSR.png");
+    background-color: transparent;
+    
+    border: 0;
+    padding: 15px 20px 15px 20px;
+}
+
+#hero button .nav-text{
+    color: ghostwhite;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+}
+
+#hero button .icon{
+    color: ghostwhite;
+
+}
+
+#q-nav {
+    height: 1vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    
+}
