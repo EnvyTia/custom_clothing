@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider and Dropdown Menu</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #d32f2f;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .slider {
+            flex: 1;
+            padding-top: 10%;
+            padding-left: 10%;
+            position: relative;
+            max-width: 40%;
+            max-height: 40%;
+            overflow: hidden;
+        }
+        .slides {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        width: 100%; /* Adjusted to fit the new number of slides */
+        }
+
+        .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex: 0 0 100%; /* Ensuring each image takes up 100% of the slider width */
+        }
+        .menu {
+            flex: 1;
+            padding: 20px;
+            max-width: 50%;
+        }
+        .menu h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .menu p {
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            background-color: #b71c1c;
+            border: 1px solid #fff;
+            margin-bottom: 10px;
+        }
+        .dropdown-header {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #fff;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+        }
+        .dropdown-content p {
+            margin: 0;
+        }
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <img src="images/ryzen2.png" alt="Slide 1">
+                <img src="images/rrargh2.png" alt="Slide 2">
+                <img src="images/ryzen2.png" alt="Slide 3">
+                <img src="images/rrargh2.png" alt="Slide 1 Clone"> <!-- Clone of the first slide for smooth looping -->
+            </div>
+        </div>
+        <div class="menu">
+            <h1>All Basic T-Shirt</h1>
+            <p>Buat kaos model standard distro dengan detail kerah oblong maupun v-neck.</p>
+            <div class="dropdown open">
+                <div class="dropdown-header">Scout T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Scout T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Collared T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Collared T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Raglan T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Raglan T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Variety T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Variety T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Oversize T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Oversize T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Built-Up T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Built-Up T-Shirt</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-header">Full Printed T-Shirt</div>
+                <div class="dropdown-content">
+                    <p>Detail tentang Full Printed T-Shirt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* JavaScript */
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = slides.children.length;
+
+function showNextSlide() {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    if (slideIndex === totalSlides - 1) {
+        setTimeout(() => {
+            slides.style.transition = 'none';
+            slideIndex = 0;
+            slides.style.transform = 'translateX(0)';
+            setTimeout(() => {
+                slides.style.transition = 'transform 1s ease-in-out';
+            }, 50);
+        }, 1000);
+    }
+}
+
+setInterval(showNextSlide, 5000);
+
+
+        document.querySelectorAll('.dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const currentDropdown = header.parentElement;
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    if (dropdown !== currentDropdown) {
+                        dropdown.classList.remove('open');
+                    }
+                });
+                currentDropdown.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

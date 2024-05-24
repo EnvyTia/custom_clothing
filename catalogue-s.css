@@ -1,6 +1,7 @@
 *{
     --b-color: #d7d7d7;
     --text-color-2: #403a56;
+    --active-color: #ff6347;
 }
 .container {
     padding-left: 17rem;
@@ -80,20 +81,30 @@
 
 .container-text h4 {
     color: var(--text-color-2);
-    border-top: 2px solid var(--b-color);
-    border-bottom: 2px solid var(--b-color);
+    border-top: 1px solid var(--b-color);
+    border-bottom: 1px solid var(--b-color);
     padding-left: 2rem;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.container-text h4.active {
+    color: var(--active-color); /* Change color when active */
 }
 
 .dropdown-explanation {
     position: static;
-    display: none;
+    display: block;
     color: var(--text-color-2);
     margin-left: -37rem;
     margin-top: 0.5rem;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide content that overflows */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Transition for smooth expand/collapse */
+    padding-top: 0; /* Initially no padding */
+    padding-bottom: 0; /* Initially no padding */
 }
 
 .dropdown-explanation.expanded {
-    display: block;
+    max-height: 500px; /* Set a max-height that is greater than the expected height of content */
 }
