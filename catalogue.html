@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="catalogue-s.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalogue-s.css">
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -104,7 +104,47 @@
         </div>
 
     </nav>
-<script src="catalogue-manager.js"></script>
-<script src="script.js"></script>
+
+    <section class="catalogues">
+        <div class="container">
+            <div class="slider">
+                <img id="slide1" class="active" src="images/cemon.jpg" alt="emon">
+                <img id="slide2" src="images/ciori.png" alt="emon2">
+                <img id="slide3" src="images/rrargh.jpeg" alt="emon3">
+                <img id="slide4" src="images/ryzen2.png" alt="emon3">
+            </div>
+        </div>
+        <div class="container-text">
+            <div class="dropdown">
+                <button onclick="toggleDropdown(1)">Cotton Combed 16s</button>
+                <div id="dropdown1" class="dropdown-content show">
+                    <p>Cotton Combed 16s adalah jenis kain katun yang memiliki 
+                        ketebalan paling tebal dibandingkan dengan jenis lainnya.Cotton Combed 16s sangat cocok digunakan untuk produk yang memerlukan kain tebal dan kuat seperti jaket, kaos untuk musim dingin, atau produk yang memerlukan daya tahan lebih tinggi.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown(2)">Cotton Combed 20s</button>
+                <div id="dropdown2" class="dropdown-content">
+                    <p>Cotton Combed 20s adalah jenis kain katun yang memiliki ketebalan sedang, memberikan keseimbangan antara ketebalan dan kenyamanan. Kain ini sering digunakan untuk kaos sehari-hari karena memiliki kekuatan dan ketahanan yang cukup baik, tetapi tetap nyaman dipakai.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown(3)">Cotton Combed 24s</button>
+                <div id="dropdown3" class="dropdown-content">
+                    <p>Cotton Combed 24s adalah kain katun yang lebih tipis dari 20s tetapi lebih tebal dari 30s. Cotton Combed 24s biasanya digunakan untuk kaos yang dipakai di iklim yang lebih hangat.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown(4)">Cotton Combed 30s</button>
+                <div id="dropdown4" class="dropdown-content">
+                    <p>Cotton Combed 30s adalah jenis kain katun yang paling tipis dan paling lembut di antara jenis-jenis lainnya. Cotton Combed 30s sangat cocok untuk kaos yang dipakai di iklim panas, pakaian tidur, atau pakaian sehari-hari yang mengutamakan kenyamanan tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script src="JS/catalogue-manager.js"></script>
+<script src="JS/script.js"></script>
 </body>
 </html>
