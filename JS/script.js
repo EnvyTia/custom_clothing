@@ -23,16 +23,16 @@ if(body.classList.contains("dark")){
 });
 
 
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
+// document.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
+// });
 
-document.addEventListener('keydown', function(e) {
-  if (e.keyCode == 123 || // F12
-      (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || // Ctrl+Shift+I
-                                   e.keyCode == 74 || // Ctrl+Shift+J
-                                   e.keyCode == 67)) || // Ctrl+Shift+C
-      (e.ctrlKey && e.keyCode == 85)) { // Ctrl+U
-      e.preventDefault();
-  }
-});
+// document.addEventListener('keydown', function(e) {
+//   if (e.keyCode == 123 || // F12
+//       (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || // Ctrl+Shift+I
+//                                    e.keyCode == 74 || // Ctrl+Shift+J
+//                                    e.keyCode == 67)) || // Ctrl+Shift+C
+//       (e.ctrlKey && e.keyCode == 85)) { // Ctrl+U
+//       e.preventDefault();
+//   }
+// });
