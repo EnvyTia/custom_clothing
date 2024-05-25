@@ -20,6 +20,7 @@
     --base-cyan: #20bec6;
     --t-cyan: #20bec67a;
     --shadow-color: #5a6f71a7;
+    --black-en: #383439;
 
 
 
@@ -118,19 +119,21 @@ body.dark{
 .container-text {
     flex: 1;
     display: flex;
-    padding-top: 2rem;
+    padding-top: 1.6rem;
     padding-left: 0rem;
     flex-direction: column;
 }
 .dropdown {
     
     width: 30rem;
-    margin-bottom: 10px;
+    border-top: 3px solid #707070;
+    /* border-bottom: 2px solid #707070; */
+    /* margin-bottom: 10px; */
 }
 .dropdown-content {
     display: none;
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 2px solid #000000; */
     border-radius: 5px;
     background-color: var(--nb-color);
     font-weight: 500;
@@ -140,7 +143,7 @@ body.dark{
 .dropdown-content.show {
     display:inline-block;
     padding-left: 0rem;
-    height: 12rem;
+    height: 13.8rem;
     
     transition: --tran-03;
 }

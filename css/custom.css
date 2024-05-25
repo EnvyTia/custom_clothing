@@ -112,9 +112,9 @@ body.dark{
 }
 
 .slider-buttons button {
-    padding: 0.7em 1.3em;
+    padding: 1.2em 1.2em;
     margin: 0 5px;
-    background-color: var(--primary-color-light);
+    /* background-color: var(--primary-color-light); */
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
@@ -123,14 +123,28 @@ body.dark{
     justify-content: center;
     /* translate: ; */
 }
+#white-b{
+    background-color: #fff;
+}
+#black-b{
+    background-color: #000;
+}
+#navy-b{
+    background-color: #000080;
+}
+/* .slider-buttons button  */
+#olive-b{
+    background-color: #808000;
+}
 
 .slider-buttons button:hover {
-    background-color: var(--primary-color);
-    color: #fff;
+    /* background-color: var(--primary-color); */
+    border: 10px solid --primary-color;
+    /* color: #fff; */
 }
 .slider-buttons button.active {
     background-color: var(--nb-color);
-    border: 10px solid var(--primary-color);
+    border: 10px solid --primary-color;
 }
 .cloth-size {
     display: flex;
