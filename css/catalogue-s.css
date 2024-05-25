@@ -47,11 +47,17 @@ body.dark{
     --text-color: #ccc;
 }
 .catalogues {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     padding-left: 5rem;
     background-color: var(--nb-color);
     border: 3px solid rgba(38, 6, 46, 0.183);
+    border-radius: 10px;
+    /* width: 76.5rem; */
+    padding-bottom: 1.7rem;
+    max-width: 60rem; /* Set a maximum width */
+    margin: 2rem auto; /* Center the container */
+    
     
 }
 .slider-wrapper {
@@ -60,6 +66,7 @@ body.dark{
 }
 .slider {
     
+    margin-left: 0rem;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -70,8 +77,10 @@ body.dark{
 .slider img {
     width: 40rem;
     height: 40rem;
+    /* marf-left: 1rem; */
     
     transition: --tran-03;
+    padding-left: 0rem;
     /* max-width: 40rem; */
     display: none; /* Hide all slides by default */
 }
@@ -81,6 +90,7 @@ body.dark{
     width: 25rem;
     height: 25rem;
     transition: --tran-03;
+    padding-left: 0rem;
 }
 
 .container-text {
@@ -90,20 +100,6 @@ body.dark{
     max-width: 40rem;
 }
 
-/* .dropdown-content.show {
-    display: block;
-}
-
-.dropdown button {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-} */
-
 /* Add styles for slider navigation */
 .slider-nav {
     display: flex;
@@ -111,19 +107,18 @@ body.dark{
     margin-top: 10px;
 }
 
-.slider-nav a {
+/* .slider-nav a {
     display: block;
     width: 10px;
     height: 10px;
     background-color: #ccc;
-    border-radius: 50%;
     margin: 0 5px;
     text-indent: -9999px;
 }
 
 .slider-nav a.active {
     background-color: #333;
-}
+} */
 .container-text {
     flex: 1;
     display: flex;
