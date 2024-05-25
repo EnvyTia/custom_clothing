@@ -1,0 +1,149 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #f8f8ff;
+    --sidebar-color: #f0f8ff;
+    --primary-color: #766c92;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --shadow-color: #707070;
+    --nb-color: #8878a133;
+    --soft-b: #403a56;
+    --base-cyan: #20bec6;
+    --t-cyan: #20bec67a;
+    --shadow-color: #5a6f71a7;
+
+
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+.customization {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 32rem;
+    width: 60rem;
+    margin: 2rem 2rem 2rem 11rem;
+    background-color: var(--nb-color);
+    border: 3px solid rgba(38, 6, 46, 0.183);
+    border-radius: 10px;
+}
+
+.image-group {
+    display: flex;
+    height: 29rem;
+    width: 20rem;
+}
+
+.cust-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    height: 20rem;
+    width: 14rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider img {
+    width: 15rem;
+    height: 23rem;
+    padding-left: 0rem;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+    width: 15rem;
+    height: 23rem;
+    padding-left: 0rem;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-buttons button {
+    padding: 0.7em 1.3em;
+    margin: 0 5px;
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    /* translate: ; */
+}
+
+.slider-buttons button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.cloth-size {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    margin-right: 0.7rem;
+    padding-right: 1rem;
+}
+
+.cloth-size button {
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 15px 15px;
+    margin-bottom: 1.45rem;
+    background-color: var(--primary-color-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.cloth-size button:hover, .cloth-size button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}

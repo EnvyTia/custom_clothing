@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -52,13 +53,6 @@
                         </a>
                     </li>
 
-                    <!-- <li class="nav-link">
-                        <a href="notif.html">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
-                        </a>
-                    </li> -->
-
 
                     <li class="nav-link">
                         <a href="#">
@@ -66,14 +60,6 @@
                             <span class="text nav-text">Cart</span>
                         </a>
                     </li>
-                    <!--
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-cog icon' ></i>
-                            <span class="text nav-text">Settings</span>
-                        </a>
-                    </li> -->
 
                 </ul>
             </div>
@@ -103,7 +89,36 @@
         </div>
 
     </nav>
-    <!-- <script src="sidebar-manager.js"></script> -->
+
+    <section class="customization">
+        <div class="image-group">
+            <div class="cloth-size">
+                <button onclick="selectSize('XS')" id="size-xs">XS</button>
+                <button onclick="selectSize('S')" id="size-s">S</button>
+                <button onclick="selectSize('M')" id="size-m" class="active">M</button>
+                <button onclick="selectSize('L')" id="size-l">L</button>
+                <button onclick="selectSize('XL')" id="size-xl">XL</button>
+                <button onclick="selectSize('XXL')" id="size-xxl">XXL</button>
+            </div>
+            <div class="cust-box">
+                <div class="slider">
+                    <img id="slide1_1" class="active" src="images/cemon.jpg" alt="emon">
+                    <img id="slide1_2" src="images/ciori.png" alt="emon2">
+                    <img id="slide1_3" src="images/rrargh.jpeg" alt="emon3">
+                    <img id="slide1_4" src="images/ryzen2.png" alt="emon4">
+                </div>
+                <div class="slider-buttons">
+                    <button onclick="showSlide(1)">1</button>
+                    <button onclick="showSlide(2)">2</button>
+                    <button onclick="showSlide(3)">3</button>
+                    <button onclick="showSlide(4)">4</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="JS/custom-slide.js"></script>
     <script src="JS/script.js"></script>
 </body>
 </html>
