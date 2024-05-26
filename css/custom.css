@@ -8,24 +8,6 @@
 }
 
 :root{
-    /* ===== Colors ===== */
-    --body-color: #c3bacf;
-    /* --body-color: #f8f8ff; */
-    --sidebar-color: #f0f8ff;
-    --primary-color: #766c92;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-    --shadow-color: #707070;
-    --nb-color: #f8f8ff;
-    /* --nb-color: #8878a133; */
-    --soft-b: #403a56;
-    --base-cyan: #20bec6;
-    --t-cyan: #20bec67a;
-    --shadow-color: #5a6f71a7;
-
-
-
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -33,25 +15,6 @@
     --tran-05: all 0.3s ease;
 }
 
-body{
-    min-height: 100vh;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-}
-
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-body.dark{
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
-}
 .customization {
     display: flex;
     justify-content: center ;
@@ -60,7 +23,7 @@ body.dark{
     height: 32rem;
     width: 55rem;
     margin: 2rem 2rem 2rem 14.5rem;
-    background-color: var(--nb-color);
+    background-color: var(--main-color);
     border: 3px solid rgba(38, 6, 46, 0.183);
     border-radius: 10px;
 }
@@ -120,7 +83,7 @@ body.dark{
     position: relative;
     padding: 1.2em 1.2em;
     margin: 0.5rem 1rem;
-    /* border: 1px solid var(--primary-color); */
+    border: 1.5px solid var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -144,13 +107,13 @@ body.dark{
 
 .slider-buttons button:hover {
     /* background-color: var(--primary-color); */
-    border: 3rem solid --primary-color;
+    border: 1px solid var(--primary-color);
     /* overflow: hidden; */
     /* color: #fff; */
 }
 .slider-buttons button.active {
     background-color: var(--nb-color);
-    border: 0.5rem solid --primary-color;
+    border: 1.5px solid var(--primary-color);
 }
 .cloth-size {
     display: flex;
@@ -167,8 +130,8 @@ body.dark{
     height: 1rem;
     padding: 15px 15px;
     margin-bottom: 1.65rem;
-    background-color: var(--primary-color-light);
-    border: 1px solid var(--primary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -178,7 +141,7 @@ body.dark{
 }
 
 .cloth-size button:hover, .cloth-size button.active {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
@@ -197,15 +160,15 @@ body.dark{
     /* width: 1rem;
     height: 1rem; */
     align-items: center;
-    background-color: var(--primary-color-light);
-    border: 1px solid var(--primary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .quantity-selector button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
@@ -224,8 +187,8 @@ body.dark{
 }
 
 .upload-btn {
-    background-color: var(--primary-color-light);
-    border: 1px solid var(--primary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     padding: 0.3rem;
     margin-bottom: 1rem;
@@ -234,7 +197,7 @@ body.dark{
 }
 
 .upload-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
@@ -245,8 +208,8 @@ body.dark{
 }
 
 .dropdown {
-    background-color: var(--primary-color-light);
-    border: 1px solid var(--primary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 0.5rem;
@@ -261,7 +224,8 @@ body.dark{
     align-items: end;
 }
 .add-to-cart-btn {
-    background-color: var(--base-cyan);
+    color: var(--main-color);
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 5px;
     font-weight: 700;
@@ -275,8 +239,8 @@ body.dark{
 } */
 
 .add-to-cart-btn:hover {
-    background-color: var(--t-cyan);
-    color: #fff;
+    background-color: var(--nb-color);
+    color: var(--secondary-color);
 }
 
 .custom-group {

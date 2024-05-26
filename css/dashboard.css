@@ -7,42 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
-    --toggle-color: #DDD;
-    --shadow-color: #707070;
-    
-    --main-color: #faf5ff;
-    --primary-color: #20bec6; /*for main theme*/
-    --secondary-color: #403a56; /*for selectable options*/
-    --light-text: #f6f5ff;
-    --grey-text: #707070;
-    --dark-text: #383838;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
-
-body{
-    min-height: 100vh;
-    background-color: var(--main-color);
-    transition: var(--tran-05);
-}
-
-::selection{
-    background-color: var(--secondary-color);
-    color: #fff;
-}
-
-body.dark{
-    --main-color: #18191a;
-    --primary-color: #3a3b3c;
-    --toggle-color: #fff;
-    --dark-text: #ccc;
-}
-
 #hero{
     background-image: url("../images/emon-enchanced2.png");
     

@@ -7,23 +7,6 @@
 }
 
 :root{
-    /* ===== Colors ===== */
-    --body-color: #f8f8ff;
-    --sidebar-color: #f0f8ff;
-    --primary-color: #766c92;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-    --shadow-color: #707070;
-    --nb-color: #8878a133;
-    --soft-b: #403a56;
-    --base-cyan: #20bec6;
-    --t-cyan: #20bec67a;
-    --shadow-color: #5a6f71a7;
-    --black-en: #383439;
-
-
-
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -34,7 +17,7 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--body-color);
+    background-color: var(--main-color);
     transition: var(--tran-05);
 }
 
@@ -43,22 +26,12 @@ body{
     color: #fff;
 }
 
-body.dark{
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
-}
+
 .catalogues {
     display:flex;
-    /* justify-content: space-between; */
-    /* padding-left: 5rem; */
     background-color: var(--nb-color);
     border: 3px solid rgba(38, 6, 46, 0.183);
     border-radius: 10px;
-    /* width: 76.5rem; */
     padding-bottom: 1.7rem;
     max-width: 60rem; /* Set a maximum width */
     margin: 2rem 2rem 2rem 11rem; /* Center the container */
