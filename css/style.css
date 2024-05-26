@@ -9,19 +9,27 @@
 
 :root{
     /* ===== Colors ===== */
-    --body-color: #f8f8ff;
+    /* --body-color: #f8f8ff;
     --sidebar-color: #f0f8ff;
     --primary-color: #766c92;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
     --shadow-color: #707070;
-    --nb-color: #8878a133;
+    */--nb-color: #8878a133;/*
     --soft-b: #403a56;
     --base-cyan: #20bec6;
     --t-cyan: #20bec67a;
-    --shadow-color: #5a6f71a7;
-
+    --shadow-color: #5a6f71a7; */
+    --toggle-color: #DDD;
+    --shadow-color: #707070;
+    
+    --main-color: #faf5ff;
+    --primary-color: #20bec6; /*for main theme*/
+    --secondary-color: #403a56; /*for selectable options*/
+    --light-text: #f6f5ff;
+    --grey-text: #707070;
+    --dark-text: #383838;
 
 
 
@@ -34,22 +42,20 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--body-color);
+    background-color: var(--main-color);
     transition: var(--tran-05);
 }
 
 ::selection{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
 body.dark{
-    --body-color: #18191a;
-    --sidebar-color: #242526;
+    --main-color: #18191a;
     --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
-    --text-color: #ccc;
+    --dark-text: #ccc;
 }
 
 /* ===== Sidebar ===== */
@@ -61,13 +67,14 @@ body.dark{
     width: 250px;
     padding: 10px 14px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    background: var(--sidebar-color);
+    background: var(--main-color);
     transition: var(--tran-05);
     z-index: 100;  
 }
 .sidebar.close{
     width: 88px;
 }
+
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -96,7 +103,7 @@ body.dark{
 
 .sidebar .text,
 .sidebar .icon{
-    color: var(--text-color);
+    color: var(--dark-text);
     transition: var(--tran-03);
 }
 
@@ -153,7 +160,7 @@ header .image-text .motto{
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--sidebar-color);
     border-radius: 50%;
     display: flex;
@@ -166,7 +173,7 @@ header .image-text .motto{
 
 body.dark .sidebar header .toggle{
     color: var(--primary-color);
-    background-color: var(--text-color);
+    background-color: var(--dark-text);
 }
 
 .sidebar.close .toggle{
@@ -191,15 +198,15 @@ body.dark .sidebar header .toggle{
 }
 
 .sidebar li a:hover{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color: var(--sidebar-color);
+    color: var(--main-color);
 }
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
-    color: var(--text-color);
+    color: var(--light-text);
 }
 
 .sidebar .menu-bar{
@@ -214,7 +221,7 @@ body.dark .sidebar li a:hover .text{
 }
 .sidebar .menu-bar .mode{
     border-radius: 6px;
-    background-color: var(--primary-color-light);
+    background-color: var(--shadow-color);
     position: relative;
     transition: var(--tran-05);
 }
@@ -267,7 +274,7 @@ body.dark .mode .sun-moon i.moon{
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    background-color: var(--sidebar-color);
+    background-color: var(--main-color);
     transition: var(--tran-04);
 }
 
@@ -288,7 +295,7 @@ body.dark .switch::before{
 .home .text{
     font-size: 30px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--light-text);
     padding: 12px 60px;
 }
 
@@ -298,7 +305,7 @@ body.dark .switch::before{
     width: calc(100% - 78px);
 }
 body.dark .home .text{
-    color: var(--text-color);
+    color: var(--light-text);
 }
 
 /* dashboard */
