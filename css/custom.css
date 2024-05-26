@@ -253,11 +253,13 @@ body.dark{
     cursor: pointer;
     width: 16rem;
 }
-/* .add-to-cart{
+.add-to-cart{
     display: flex;
+    width: 20rem;
+    height: 7.4rem;
     justify-content: end;
     align-items: end;
-} */
+}
 .add-to-cart-btn {
     background-color: var(--base-cyan);
     border: none;
