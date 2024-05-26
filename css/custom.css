@@ -9,14 +9,16 @@
 
 :root{
     /* ===== Colors ===== */
-    --body-color: #f8f8ff;
+    --body-color: #c3bacf;
+    /* --body-color: #f8f8ff; */
     --sidebar-color: #f0f8ff;
     --primary-color: #766c92;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
     --shadow-color: #707070;
-    --nb-color: #8878a133;
+    --nb-color: #f8f8ff;
+    /* --nb-color: #8878a133; */
     --soft-b: #403a56;
     --base-cyan: #20bec6;
     --t-cyan: #20bec67a;
@@ -52,11 +54,12 @@ body.dark{
 }
 .customization {
     display: flex;
-    justify-content: center;
+    justify-content: center ;
+    /* justify-content: start; */
     padding: 20px;
     height: 32rem;
-    width: 60rem;
-    margin: 2rem 2rem 2rem 11rem;
+    width: 55rem;
+    margin: 2rem 2rem 2rem 14.5rem;
     background-color: var(--nb-color);
     border: 3px solid rgba(38, 6, 46, 0.183);
     border-radius: 10px;
@@ -66,9 +69,6 @@ body.dark{
     display: flex;
     height: 30rem;
     width: 27rem;
-    /* align-items:end; */
-    /* padding-left: 0rem; */
-    /* position: relative; */
     
 }
 
@@ -76,6 +76,7 @@ body.dark{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -108,43 +109,48 @@ body.dark{
 .slider-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 1.5rem;
+    max-width: 15rem;
+    
+    /* align */
 }
 
 .slider-buttons button {
+    position: relative;
     padding: 1.2em 1.2em;
-    margin: 0 5px;
-    /* background-color: var(--primary-color-light); */
-    border: 1px solid var(--primary-color);
+    margin: 0.5rem 1rem;
+    /* border: 1px solid var(--primary-color); */
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     transition: background-color 0.3s ease;
     justify-content: center;
-    /* translate: ; */
+    align-items: center;
 }
 #white-b{
-    background-color: #fff;
+    background-color: #e3e3e3;
 }
 #black-b{
-    background-color: #000;
+    background-color: #393939dc;
 }
 #navy-b{
-    background-color: #000080;
+    background-color: #36367b;
 }
 /* .slider-buttons button  */
 #olive-b{
-    background-color: #808000;
+    background-color: #7b7b3afe;
 }
 
 .slider-buttons button:hover {
     /* background-color: var(--primary-color); */
-    border: 10px solid --primary-color;
+    border: 3rem solid --primary-color;
+    /* overflow: hidden; */
     /* color: #fff; */
 }
 .slider-buttons button.active {
     background-color: var(--nb-color);
-    border: 10px solid --primary-color;
+    border: 0.5rem solid --primary-color;
 }
 .cloth-size {
     display: flex;
@@ -211,6 +217,7 @@ body.dark{
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    width: 15rem;
 }
 
 .upload-btn {
@@ -242,13 +249,18 @@ body.dark{
     margin-bottom: 0.5rem;
     cursor: pointer;
 }
-
+/* .add-to-cart{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+} */
 .add-to-cart-btn {
     background-color: var(--base-cyan);
     border: none;
     border-radius: 5px;
     padding: 15px;
     cursor: pointer;
+    /* display: flex; */
     transition: background-color 0.3s ease;
 }
 
@@ -261,6 +273,7 @@ body.dark{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-left: 2rem;
+    align-items: start;
+    /* margin-left: 0rem; */
+    width: 20rem;
 }
