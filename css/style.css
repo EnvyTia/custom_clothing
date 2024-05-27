@@ -9,18 +9,7 @@
 
 :root{
     /* ===== Colors ===== */
-    /* --body-color: #f8f8ff;
-    --sidebar-color: #f0f8ff;
-    --primary-color: #766c92;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-    --shadow-color: #707070;
-    */--nb-color: #8878a133;/*
-    --soft-b: #403a56;
-    --base-cyan: #20bec6;
-    --t-cyan: #20bec67a;
-    --shadow-color: #5a6f71a7; */
+    --nb-color: #8878a133;
     --toggle-color: #DDD;
     --shadow-color: #707070;
     
