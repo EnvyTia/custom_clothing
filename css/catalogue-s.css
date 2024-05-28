@@ -5,10 +5,19 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-image: url("../images/basebg.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; /* Ensure there is no default margin */
+    height: 100vh;
+}
 
 .catalogues {
     display:flex;
-    background-color: var(--main-color);
+    background-color: var(--main-to-nb);
     border: 3px solid rgba(38, 6, 46, 0.183);
     border-radius: 10px;
     padding-bottom: 1.7rem;
@@ -87,19 +96,32 @@
     background-color: var(--nb-color);
     font-weight: 500;
     transition: --tran-03;
+    align-content: space-around;
 }
 .dropdown-content.show {
     display:inline-block;
     padding-left: 0rem;
     height: 14.4rem;
     transition: --tran-03;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
 }
-
+.dropdown-content p {
+    text-align: left; 
+    padding-left: 1rem;
+    margin: 0;
+}
 .dropdown-content.show p{
     position: relative;
     text-align:left; 
     padding-left: 1rem;
     display: flex;
+}
+#price {
+    padding-top: auto; /* Push the price paragraph to the bottom */
+    padding-left: 1rem;
 }
 .dropdown button {
     width: 100%;
@@ -111,7 +133,7 @@
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-    color: var(--main-color);
+    color: var(--staylight);
 }
 .dropdown.dark{
     background-color: var(--nb-color);

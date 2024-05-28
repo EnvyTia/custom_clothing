@@ -1,38 +1,60 @@
 
-const body = document.querySelector('body'),
-sidebar = body.querySelector('nav'),
-toggle = body.querySelector(".toggle"),
-//   searchBtn = body.querySelector(".search-box"),
-modeSwitch = body.querySelector(".toggle-switch"),
-modeText = body.querySelector(".mode-text");
+// const body = document.querySelector('body'),
+// sidebar = body.querySelector('nav'),
+// toggle = body.querySelector(".toggle"),
+// //   searchBtn = body.querySelector(".search-box"),
+// modeSwitch = body.querySelector(".toggle-switch"),
+// modeText = body.querySelector(".mode-text");
 
 
-toggle.addEventListener("click" , () =>{
-sidebar.classList.toggle("close");
-})
+// toggle.addEventListener("click" , () =>{
+// sidebar.classList.toggle("close");
+// })
 
-modeSwitch.addEventListener("click" , () =>{
-body.classList.toggle("dark");
+// modeSwitch.addEventListener("click" , () =>{
+// body.classList.toggle("dark");
 
-if(body.classList.contains("dark")){
-  modeText.innerText = "Light mode";
-}else{
-  modeText.innerText = "Dark mode";
+// if(body.classList.contains("dark")){
+//   modeText.innerText = "Light mode";
+// }else{
+//   modeText.innerText = "Dark mode";
   
-}
+// }
+// });
+
+
+const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+// Load theme from localStorage
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("darkMode") === "true") {
+        body.classList.add("dark");
+        modeText.innerText = "Light mode";
+    } else {
+        modeText.innerText = "Dark mode";
+    }
+
+    // Remove the hidden class to prevent flash
+    body.classList.remove("hidden");
 });
 
+toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+});
 
-// document.addEventListener('contextmenu', function(e) {
-//   e.preventDefault();
-// });
+modeSwitch.addEventListener("click", () => {
+    body.classList.toggle("dark");
 
-// document.addEventListener('keydown', function(e) {
-//   if (e.keyCode == 123 || // F12
-//       (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || // Ctrl+Shift+I
-//                                    e.keyCode == 74 || // Ctrl+Shift+J
-//                                    e.keyCode == 67)) || // Ctrl+Shift+C
-//       (e.ctrlKey && e.keyCode == 85)) { // Ctrl+U
-//       e.preventDefault();
-//   }
-// });
+    // Save the preference to localStorage
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("darkMode", "true");
+        modeText.innerText = "Light mode";
+    } else {
+        localStorage.setItem("darkMode", "false");
+        modeText.innerText = "Dark mode";
+    }
+});
