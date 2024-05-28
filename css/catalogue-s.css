@@ -93,6 +93,7 @@ body{
     display: none;
     padding: 10px;
     border-radius: 5px;
+    color: var(--dark-text);
     background-color: var(--nb-color);
     font-weight: 500;
     transition: --tran-03;
@@ -102,6 +103,7 @@ body{
     display:inline-block;
     padding-left: 0rem;
     height: 14.4rem;
+    color: var(--dark-text);
     transition: --tran-03;
     flex-direction: column;
     justify-content: center;
@@ -109,11 +111,13 @@ body{
     align-content: space-around;
 }
 .dropdown-content p {
+    color: var(--dark-text);
     text-align: left; 
     padding-left: 1rem;
     margin: 0;
 }
 .dropdown-content.show p{
+    color: var(--dark-text);
     position: relative;
     text-align:left; 
     padding-left: 1rem;

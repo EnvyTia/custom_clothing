@@ -31,19 +31,19 @@ h5, h4, p{
     font-size: 55px;
     padding-top: 9.1rem;
     padding-bottom: 4rem;
-    filter: drop-shadow(0px 0px 0px var(--light-text));
+    /* filter: drop-shadow(0px 0px 0px var(--light-text)); */
 } 
 
 /* #hero.dark h1{
     color: var(--primary-color);
 } */
 #hero h2{
-    color: var(--secondary-color);
+    color: var(--stay-dark);
     font-size: 40px;
     /* padding-top: 2rem; */
 }
 #hero p{
-    color: var(--secondary-color);
+    color: var(--stay-dark);
     font-weight: 600;
 }
 
