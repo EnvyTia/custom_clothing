@@ -14,7 +14,7 @@
     height: 120vh;
     width: 100%;
     background-size: cover;
-    padding: 0 20rem;
+    padding: 0 20rem 0 15rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -95,13 +95,6 @@ a {
     border-bottom: px solid var(--shadow-color);
     padding-right: 20px;    
     z-index: 99;
-}
-
-.how-to-order{
-    height: 100vh;
-    width: 100%;
-    background-color: --main-color;
-    margin: 20rem;
 }
 
 .text h2{
@@ -196,3 +189,52 @@ a {
     text-align: center;
     
 }
+
+#how-to-order {
+    /* padding-top: 10rem; */
+    display: flex;
+    width: 70rem;
+    height: 40rem;
+    padding-left: 12rem;
+    flex-direction: column;
+}
+#how-to-order p{
+    padding: 1rem 2rem 0 2rem;
+}
+
+#how-to-order .ilustration {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    height: 30rem;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+    border: 2px solid var(--secondary-color);
+    height: 17rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    background-color: var(--nb-color); /* Default primary color if not set */
+    color: var(--dark-text); /* Default text color if not set */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.card1 .card-il-1 img, .card2 .card-il-2 img, .card3 .card-il-3 img, .card4 .card-il-4 img, .card5 .card-il-5 img{
+/* .illust img{ */
+    padding: 1rem 1rem 2rem 1rem ;
+    height: 10rem;
+    /* overflow: hidden; */
+    width: 12rem;
+    border: 1px;
+    /* border: 1px solid #000; */
+}
+
