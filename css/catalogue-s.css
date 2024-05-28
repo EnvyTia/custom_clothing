@@ -91,24 +91,26 @@ body{
 }
 .dropdown-content {
     display: none;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
     color: var(--dark-text);
     background-color: var(--nb-color);
     font-weight: 500;
     transition: --tran-03;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
 }
 .dropdown-content.show {
-    display:inline-block;
-    padding-left: 0rem;
+    display:flex;
+    padding: 1.5rem 0 1.5rem 0;
     height: 14.4rem;
     color: var(--dark-text);
     transition: --tran-03;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    align-content: space-around;
+    text-align: left;
+    align-content: flex-end;
 }
 .dropdown-content p {
     color: var(--dark-text);
@@ -125,7 +127,7 @@ body{
 }
 #price {
     padding-top: auto; /* Push the price paragraph to the bottom */
-    padding-left: 1rem;
+    text-align: left;
 }
 .dropdown button {
     width: 100%;
