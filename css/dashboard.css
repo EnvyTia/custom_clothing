@@ -218,8 +218,17 @@ a {
     padding: 1rem 5rem 0 12rem;
     flex-direction: column;
     color: var(--dark-text);
+    /* align-content: center;
+     */
+     justify-content: center;
     /* background-image: url("../images/bgdb.png"); */
     /* background-color: ; */
+}
+#how-to-order h3{
+    font-size: 30px;
+}
+#how-to-order .text{
+    text-align: center;
 }
 #how-to-order p{
     padding: 0 2rem 0 2rem;
@@ -325,4 +334,5 @@ h5 {
 }
 .contacts p{
     color: var(--stay-dark);
+    padding-bottom: 1rem;
 }
