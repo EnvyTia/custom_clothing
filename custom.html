@@ -66,7 +66,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="login.html">
                         <i class='bx bx-user-circle icon' ></i>
                         <span class="text nav-text">User</span>
                     </a>
@@ -121,11 +121,21 @@
             </div>
         </div>
         <div class="custom-group">
-            <div class="upload-section">
-                <button class="upload-btn">--Upload file Front picture--</button>
-                <button class="upload-btn">--Upload file Rear picture--</button>
-                <button class="upload-btn">--Upload file Right emblem--</button>
-                <button class="upload-btn">--Upload file Left emblem--</button>
+            <div class="upload-btn">
+                <label for="front-picture" id="front-label">--Upload file Front picture--</label>
+                <input type="file" id="front-picture" name="front-picture" accept="image/*" onchange="updateLabel('front-picture', 'front-label')">
+            </div>
+            <div class="upload-btn">
+                <label for="rear-picture" id="rear-label">--Upload file Rear picture--</label>
+                <input type="file" id="rear-picture" name="rear-picture" accept="image/*" onchange="updateLabel('rear-picture', 'rear-label')">
+            </div>
+            <div class="upload-btn">
+                <label for="right-emblem" id="right-label">--Upload file Right emblem--</label>
+                <input type="file" id="right-emblem" name="right-emblem" accept="image/*" onchange="updateLabel('right-emblem', 'right-label')">
+            </div>
+            <div class="upload-btn">
+                <label for="left-emblem" id="left-label">--Upload file Left emblem--</label>
+                <input type="file" id="left-emblem" name="left-emblem" accept="image/*" onchange="updateLabel('left-emblem', 'left-label')">
             </div>
             <div class="dropdown-section">
                 <select class="dropdown">
@@ -143,6 +153,9 @@
                     <option>Foam Sablon</option>
                 </select>
             </div>
+            <div class="price-display">
+                <span>Price: </span><span id="total-price">$10.00</span>
+            </div>
             <div class="add-to-cart">
                 <button class="add-to-cart-btn">ADD TO CART
                     <i class='bx bxs-cart-add icon' ></i>
@@ -150,6 +163,15 @@
             </div>
         </div>
     </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Successfully added to cart</p>
+            <a href="custom.html">
+                <button id="okBtn">Ok</button>
+            </a>
+        </div>
+    </div>
 
     
     <script src="JS/custom-slide.js"></script>
